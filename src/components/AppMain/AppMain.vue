@@ -1,11 +1,11 @@
 <script>
-import MainJumbotron from './MainJumbotron';
-import ProfessionalSection from './Sections/ProfessionalSection';
-import TypeProfessionalSection from './Sections/TypeProfessionalSection';
-import EventsSection from './Sections/EventsSection';
-import ExpertTrainersSection from './Sections/ExpertTrainersSection';
-import SpecialPacksSection from './Sections/SpecialPacksSection';
-import ArticlesSection from './Sections/ArticlesSection';
+import MainJumbotron from './MainJumbotron.vue';
+import ProfessionalSection from './Sections/ProfessionalSection.vue';
+import TypeProfessionalSection from './Sections/TypeProfessionalSection.vue';
+import EventsSection from './Sections/EventsSection.vue';
+import ExpertTrainersSection from './Sections/ExpertTrainersSection.vue';
+import SpecialPacksSection from './Sections/SpecialPacksSection.vue';
+import ArticlesSection from './Sections/ArticlesSection.vue';
 
 export default {
     name: 'AppMain',
@@ -22,12 +22,15 @@ export default {
 }
 </script>
 <template>
-    <MainJumbotron />
-    <ProfessionalSection />
-    <TypeProfessionalSection />
-    <EventsSection />
-    <ExpertTrainersSection />
-    <SpecialPacksSection />
-    <ArticlesSection />
+    <main>
+        <h1>prova</h1>
+        <MainJumbotron />
+        <ProfessionalSection />
+        <TypeProfessionalSection />
+        <EventsSection />
+        <ExpertTrainersSection />
+        <SpecialPacksSection />
+        <ArticlesSection />
+    </main>
 </template>
 <style></style>
