@@ -22,7 +22,7 @@ export default {
 }
 </script>
 <template>
-    <main>
+    <main class="container border border-success">
         <MainJumbotron />
         <ProfessionalSection />
         <TypeProfessionalSection />
@@ -32,4 +32,8 @@ export default {
         <ArticlesSection />
     </main>
 </template>
-<style></style>
+<style>
+.container {
+    min-height: 500px;
+}
+</style>
