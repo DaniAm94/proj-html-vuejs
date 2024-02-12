@@ -5,7 +5,7 @@ export default {
     name: 'CarouselButton',
     props: {
         // CLASSE ICONA 
-        class: String,
+        icon: String,
         // COLORE 
         color: String,
         // COLORE SFONDO 
@@ -19,9 +19,9 @@ export default {
 <!-- HTML -->
 <template>
     <!-- BOTTONE CON ICONA A SINISTRA -->
-    <button :class="[color, backColor]"><span :class="class"></span></button>
+    <button :class="[color, backColor]"><span :class="icon"></span></button>
     <!-- BOTTONE CON ICONA A DESTRA -->
-    <button :class="[color, backColor]"><span :class="class"></span></button>
+    <button :class="[color, backColor]"><span :class="icon"></span></button>
 </template>
 
 <!-- CSS -->
