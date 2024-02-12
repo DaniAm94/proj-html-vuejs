@@ -23,7 +23,6 @@ export default {
 </script>
 <template>
     <main>
-        <h1>prova</h1>
         <MainJumbotron />
         <ProfessionalSection />
         <TypeProfessionalSection />
