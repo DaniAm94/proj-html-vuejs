@@ -1,9 +1,11 @@
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import AppHeader from './components/AppHeader/AppHeader.vue';
+import AppMain from './components/AppMain/AppMain.vue';
+import AppFooter from './components/AppFooter/AppFooter.vue';
 
 export default {
   name: 'Mountain Bike App',
-  components: { FontAwesomeIcon }
+  components: { AppHeader, AppMain, AppFooter }
 }
 </script>
 
