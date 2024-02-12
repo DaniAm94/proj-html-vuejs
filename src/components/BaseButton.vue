@@ -7,7 +7,7 @@ export default {
         // TESTO BOTTONE
         text: String,
         // CLASSE ICONA
-        class: String
+        icon: String
     }
     
 };
@@ -17,7 +17,7 @@ export default {
 <!-- HTML -->
 <template>
     <!-- BOTTONI GLOBALI -->
-    <button>{{ text }} <span :class="class"></span></button>
+    <button>{{ text }} <span :class="icon"></span></button>
 </template>
 
 <!-- CSS -->
