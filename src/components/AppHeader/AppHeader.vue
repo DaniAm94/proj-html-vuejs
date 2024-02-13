@@ -9,14 +9,16 @@ export default {
 
 <template>
     <header>
-        <nav class="d-flex justify-content-between px-5 align-items-center h-100">
-            <div>logo</div>
-            <HeaderNav />
-            <div class="d-flex">
-                <p>icon</p>
-                <p>btn</p>
-            </div>
-        </nav>
+        <div class="container border">
+            <nav class="d-flex justify-content-between px-5 align-items-center h-100">
+                <div>logo</div>
+                <HeaderNav />
+                <div class="d-flex">
+                    <p>icon</p>
+                    <p>btn</p>
+                </div>
+            </nav>
+        </div>
     </header>
 </template>
 
