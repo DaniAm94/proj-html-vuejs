@@ -1,7 +1,12 @@
 <script>
 import SectionCard from './SectionCard.vue';
+import { specPacks } from '../../../assets/data'
 export default {
     name: 'SpecialPacksSection',
+    data: () => ({
+        specPacks
+    }),
+
     components: { SectionCard },
 }
 </script>
@@ -12,8 +17,8 @@ export default {
             <h2>Special Packs</h2>
             <p>Subtitle</p>
             <div class="row row-cols-3">
-                <div class="col">
-                    <SectionCard />
+                <div v-for="pack in specPacks" class="col">
+                    <SectionCard :packName="pack.title" :isFlipCard="true" />
                 </div>
             </div>
         </div>
