@@ -209,7 +209,7 @@ export default {
             color: white;
             text-align: center;
             padding: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 80px;
 
             &::after {
                 content: '';
@@ -217,8 +217,8 @@ export default {
                 top: 100%;
                 left: 0;
                 right: 0;
-                border-top: 30px solid black;
-                border-right: 415px solid transparent;
+                height: 70px;
+                background-image: linear-gradient(173deg, black 49%, white 50%);
 
             }
         }
