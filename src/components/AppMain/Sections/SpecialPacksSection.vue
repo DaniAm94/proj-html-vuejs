@@ -11,7 +11,6 @@ export default {
             <img src="#" alt="medal">
             <h2>Special Packs</h2>
             <p>Subtitle</p>
-            <SectionCard />
         </div>
     </section>
 </template>

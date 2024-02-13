@@ -11,7 +11,7 @@ export default {
     <section>
         <h2>TITOLO</h2>
         <div class="container">
-            <SectionCard />
+
         </div>
     </section>
 </template>

@@ -13,7 +13,6 @@ export default {
             <h6>loremmmmmmmmmmmmm</h6>
         </div>
         <div class="container my-2">
-            <SectionCard />
         </div>
     </section>
 </template>

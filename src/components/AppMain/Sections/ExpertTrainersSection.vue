@@ -11,7 +11,7 @@ export default {
 
             <h2>TITLE</h2>
             <p>Subtitle</p>
-            <SectionCard />
+
         </div>
     </section>
 </template>
