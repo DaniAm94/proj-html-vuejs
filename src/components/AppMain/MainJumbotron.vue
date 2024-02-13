@@ -22,13 +22,18 @@ export default {
 <style lang="scss" scoped>
 #jumbotron {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    row-gap: 10px;
-    height: 700px;
+
     background-color: dodgerblue;
+
+    .container {
+        height: 700px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        row-gap: 10px;
+    }
 }
 
 .carousel-button {
@@ -37,11 +42,11 @@ export default {
     transform: translateY(-50%);
 
     &.left {
-        left: 20px;
+        left: 10px;
     }
 
     &.right {
-        right: 20px;
+        right: 10px;
     }
 }
 </style>
