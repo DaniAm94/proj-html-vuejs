@@ -10,6 +10,5 @@ export default {
 </script>
 <template>
     <div class="row" :class="col === 3 ? 'row-cols-3' : 'row-cols-4'">
-        <SectionCard />
     </div>
 </template>

@@ -11,7 +11,6 @@ export default {
         <div class="container py-3">
 
             <h2 class="text-center py-3">Titolo type professional</h2>
-            <div class="row"></div>
             <CardsList />
             <div class="text-center mt-3">
                 <CarouselButton class="color me-3" direction="left" />
