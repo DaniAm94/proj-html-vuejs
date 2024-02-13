@@ -62,25 +62,25 @@ const professionalData = [
 const profTypeData = [
     {
         title: "Riding Lesson",
-        img: "../img/training-box-1.jpg"
+        img: "training-box-1.jpg"
     },
     {
         title: "Safe Driving",
-        img: "../img/training-box-2.jpg"
+        img: "training-box-2.jpg"
     },
     {
         title: "Mountain Bike",
-        img: "../img/training-box-3.jpg"
+        img: "training-box-3.jpg"
     },
 
     {
         title: "Trail Drive",
-        img: "../img/training-box-4.jpg"
+        img: "training-box-4.jpg"
     },
 
     {
         title: "Pedaling",
-        img: "../img/training-box-5.jpg"
+        img: "training-box-5.jpg"
     },
 
 ]
@@ -89,7 +89,7 @@ const profTypeData = [
 const events = [
     {
         date: "22 JUN",
-        img: "../img/event1.jpg",
+        img: "event1.jpg",
         title: "Toronto Cycling Event 2023",
         time: "2022-06-22 @ 01:30 - 2024-08-23 @ 07:00",
         place: "Toronto",
@@ -97,7 +97,7 @@ const events = [
     },
     {
         date: "30 JUN",
-        img: "../img/event2.jpg",
+        img: "event2.jpg",
         title: "Instambul Cycling Event 2023",
         time: "2022-06-30 @ 01:30 - 2024-10-19 @ 03:30",
         place: "Instanbul",
@@ -105,7 +105,7 @@ const events = [
     },
     {
         date: "22 JUN",
-        img: "../img/event3.jpg",
+        img: "event3.jpg",
         title: "Paris Cycling Event 2023",
         time: "2022-06-22 @ 07:30 - 2024-11-08 @ 16:30",
         place: "Paris",
@@ -113,7 +113,7 @@ const events = [
     },
     {
         date: "25 JUN",
-        img: "../img/event4.jpg",
+        img: "event4.jpg",
         title: "New Jersey Cycling Event 2023",
         time: "2022-06-25 @ 03:00 - 2024-08-23 @ 05:30",
         place: "New Jersey",
@@ -121,7 +121,7 @@ const events = [
     },
     {
         date: "28 JUN",
-        img: "../img/event5.jpg",
+        img: "event5.jpg",
         title: "London Cycling Event 2023",
         time: "2022-06-28 @ 07:30 - 2024-07-26 @ 12:00",
         place: "London",
@@ -129,7 +129,7 @@ const events = [
     },
     {
         date: "29 JUN",
-        img: "../img/event6.jpg",
+        img: "event6.jpg",
         title: "Kiev Cycling Event 2023",
         time: "2022-06-29 @ 10:00 - 2024-05-18 @ 04:30",
         place: "Kiev",
@@ -137,7 +137,7 @@ const events = [
     },
     {
         date: "28 JUN",
-        img: "../img/event7.jpg",
+        img: "event7.jpg",
         title: "Colorado Cycling Event 2023",
         time: "2022-06-28 @ 04:00 - 2024-10-14 @ 05:30",
         place: "Colorado",
@@ -145,7 +145,7 @@ const events = [
     },
     {
         date: "28 JUN",
-        img: "../img/event8.jpg",
+        img: "event8.jpg",
         title: "Amsterdam Cycling Event 2023",
         time: "2022-06-28 @ 10:30 - 2024-10-24 @ 10:30",
         place: "Amsterdam",
@@ -153,7 +153,7 @@ const events = [
     },
     {
         date: "22 JUN",
-        img: "../img/event9.jpg",
+        img: "event9.jpg",
         title: "Toronto Cycling Event 2023",
         time: "2022-06-22 @ 09:30 - 2024-09-27 @ 17:30",
         place: "Toronto",
@@ -161,7 +161,7 @@ const events = [
     },
     {
         date: "26 JUN",
-        img: "../img/event10.jpg",
+        img: "event10.jpg",
         title: "Paris Cycling Event 2023",
         time: "2022-06-26 @ 05:30 - 2024-12-20 @ 14:00",
         place: "Paris",
@@ -171,19 +171,19 @@ const events = [
 
 const expertTrainers = [
     {
-        img: "../img/biker1.jpg",
+        img: "biker1.jpg",
         name: "John Doe",
     },
     {
-        img: "../img/biker2.jpg",
+        img: "biker2.jpg",
         name: "Emily Brown",
     },
     {
-        img: "../img/biker3.jpg",
+        img: "biker3.jpg",
         name: "Micheal Lee",
     },
     {
-        img: "../img/biker4.jpg",
+        img: "biker4.jpg",
         name: "Robert Lee",
     },
 ]
@@ -211,4 +211,19 @@ const articleData = [
     },
 ]
 
-export { headerLinks, footerLinks, jumbotronData, professionalData, profTypeData, events, expertTrainers, articleData }
+const specPacks = [
+    {
+        title: 'Basic',
+        price: '$1800'
+    },
+    {
+        title: 'Standard',
+        price: '$2500'
+    },
+    {
+        title: 'Premium',
+        price: '$5000'
+    }
+]
+
+export { headerLinks, footerLinks, jumbotronData, professionalData, profTypeData, events, expertTrainers, articleData, specPacks }
