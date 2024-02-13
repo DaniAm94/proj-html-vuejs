@@ -10,7 +10,7 @@ export default {
     <section id="jumbotron">
         <h2>Jumbo title</h2>
         <span>random text</span>
-        <BaseButton :hasArrow="'true'" :text="'Learn More'" />
+        <BaseButton :hasArrow="true" :text="'Learn More'" />
         <CarouselButton class="carousel-button left" :direction="'left'" :backColor="'bg-black'" :color="'text-white'" />
         <CarouselButton class="carousel-button right" :direction="'right'" :backColor="'bg-black'" :color="'text-white'" />
     </section>
