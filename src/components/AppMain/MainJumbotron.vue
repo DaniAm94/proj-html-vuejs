@@ -1,15 +1,26 @@
 <script>
 import { Carousel } from 'bootstrap';
+import { jumbotronData } from '../../assets/data/index.js';
 
 export default {
     name: 'MainJumbotron',
-    components: { Carousel }
+    components: { Carousel },
+    data: () => ({
+        slides: jumbotronData,
+        currentActiveIndex: 0,
+    }),
+    computed: {
+
+
+    },
 }
+
+
 </script>
 <template>
     <section id="jumbotron">
         <figure>
-            <img src="../../assets/img/slider-bike-4.jpg" alt="bike-4">
+            <img src="../../assets/img/slider-bike-4.jpg" alt="bike">
         </figure>
         <div class="container">
             <!--PREV BUTTON-->
