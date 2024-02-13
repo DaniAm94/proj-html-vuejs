@@ -1,15 +1,15 @@
 <!-- JS -->
 <script>
 
+
 export default {
     name: 'BaseButton',
     props: {
         // TESTO BOTTONE
         text: String,
         // CLASSE ICONA
-        icon: String
-    }
-    
+        hasArrow: Boolean
+    },
 };
 
 </script>
@@ -17,12 +17,13 @@ export default {
 <!-- HTML -->
 <template>
     <!-- BOTTONI GLOBALI -->
-    <button>{{ text }} <span :class="icon"></span></button>
+    <button>{{ text }}
+        <FontAwesomeIcon v-if="hasArrow" icon="arrow-right" />
+    </button>
 </template>
 
 <!-- CSS -->
 <style scoped lang="scss">
-
 @use '../assets/scss/vars' as *;
 
 button {
@@ -33,5 +34,4 @@ button {
     border-radius: 1px;
 
 }
-
 </style>
