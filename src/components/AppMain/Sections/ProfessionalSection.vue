@@ -66,7 +66,7 @@ export default {
 
 
         img {
-            height: 750px;
+            height: 650px;
             position: absolute;
         }
 

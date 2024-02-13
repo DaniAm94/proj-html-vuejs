@@ -27,7 +27,7 @@ export default {
 @use '../assets/scss/vars' as *;
 
 button {
-    padding: 10px 20px;
+    padding: 15px 25px;
     background-color: $black;
     color: $white;
     border: 1px solid $black;
