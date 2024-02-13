@@ -77,13 +77,18 @@ export default {
 <style lang="scss" scoped>
 #jumbotron {
     position: relative;
+    height: calc(100vh);
+    margin-top: 100px;
 
     figure {
         width: 100%;
+        height: calc(100% - 100px);
 
         img {
+            height: 100%;
             width: 100%;
-            height: auto;
+            object-fit: cover;
+            object-position: center bottom;
         }
     }
 
