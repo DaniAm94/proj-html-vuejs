@@ -5,7 +5,7 @@ export default {
 </script>
 <template>
     <section id="professional">
-        <div class="container py-3">
+        <div class="container">
 
             <figure>
                 <div></div>
@@ -29,6 +29,7 @@ export default {
 <style scoped lang="scss">
 #professional {
     height: 800px;
+    padding: 100px 0;
 
     .container {
         display: flex;
