@@ -190,22 +190,22 @@ const expertTrainers = [
 
 const articleData = [
     {
-        img: "news-bike-5",
+        img: "news-bike5.jpg",
         title: "Road bike or mountain bike?",
         text: "Compared to similar road bikes with a solid frame structure, (...)",
     },
     {
-        img: "news-bike-6",
+        img: "news-bike6.jpg",
         title: "What is mountain biking called?",
         text: "Mountain biking is one of the most popular outdoor sports, (...)",
     },
     {
-        img: "news-bike-3",
+        img: "news-bike3.jpg",
         title: "how much should you cycle a day?",
         text: "In order to get the right benefit from the exercise (...)",
     },
     {
-        img: "news-bike-4",
+        img: "news-bike4.jpg",
         title: "How long does it take 5 km by bike?",
         text: "It takes 5 km and 10 minutes, sir. But at (...)",
     },
