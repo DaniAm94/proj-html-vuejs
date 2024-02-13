@@ -10,35 +10,65 @@ export default {
         currentActiveIndex: 0,
     }),
     computed: {
+        isFirstIndex() {
+            return this.currentActiveIndex === 0;
 
+        },
+        isLastIndex() {
+            return this.currentActiveIndex === this.slides.length - 1;
+        },
+        lastIndex() {
+            return this.slides.length - 1;
+        },
+
+    },
+    methods: {
+        goTo(direction) {
+            if (direction === 'right') {
+                if (this.currentActiveIndex === this.lastIndex) {
+                    this.currentActiveIndex = 0;
+                } else {
+                    this.currentActiveIndex++;
+                }
+
+            } else {
+                if (this.currentActiveIndex === 0) {
+                    this.currentActiveIndex = this.lastIndex;
+                } else {
+                    this.currentActiveIndex--;
+                }
+            }
+        },
+        getImagePath(img) {
+            const url = new URL(`../../assets/img/${img}`, import.meta.url);
+            return url.href;
+        }
 
     },
 }
-
-
 </script>
 <template>
     <section id="jumbotron">
-        <figure>
-            <img src="../../assets/img/slider-bike-4.jpg" alt="bike">
+        <figure v-for="(slide, i) in  slides " v-show="i === currentActiveIndex">
+            <img :src="getImagePath(slide.img)" :alt="slide.title">
         </figure>
         <div class="container">
             <!--PREV BUTTON-->
-            <CarouselButton class="carousel-button left" :direction="'left'" :backColor="'bg-black'"
+            <CarouselButton @click="goTo('left')" class="carousel-button left" :direction="'left'" :backColor="'bg-black'"
                 :color="'text-white'" />
 
             <!--CAPTION-->
-            <figcaption>
-                <h2 class="high-title text-white ps-5">Unforgettable Cycling Experience</h2>
-                <span class="text-white ps-5">Learn cycling from the pros.</span>
-            </figcaption>
+            <div v-for="(slide, i) in  slides " v-show="i === currentActiveIndex">
+                <h2 class="text-white ps-5">{{ slide.title }}</h2>
+                <span class="text-white ps-5">{{ slide.text }}</span>
+            </div>
             <!--BUTTON-->
             <BaseButton :hasArrow="true" :text="'Learn More'" class="ms-5 base-button" />
 
 
             <!--NEXT BUTTON-->
-            <CarouselButton class="carousel-button right" :direction="'right'" :backColor="'bg-black'"
-                :color="'text-white'" />
+            <CarouselButton @click="goTo('right')" class="carousel-button right" :direction="'right'"
+                :backColor="'bg-black'" :color="'text-white'" />
         </div>
     </section>
 </template>
@@ -46,6 +76,7 @@ export default {
 
 <style lang="scss" scoped>
 #jumbotron {
+    position: relative;
 
     figure {
         width: 100%;

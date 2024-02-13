@@ -36,17 +36,17 @@ const jumbotronData = [
     {
         title: "Learn Mountain Bike From The Expert",
         text: "Learn cycling from the pros.",
-        img: "../img/slider-bike-4.jpg"
+        img: "slider-bike-4.jpg"
     },
     {
         title: "Unforgettable Cycling Experience",
         text: "Learn cycling from the pros.",
-        img: "../img/slider-bike-9.jpg"
+        img: "slider-bike-9.jpg"
     },
     {
         title: "Professional Cycling Club",
         text: "Learn cycling from the pros.",
-        img: "../img/slider-bike-12.jpg"
+        img: "slider-bike-12.jpg"
     }
 ]
 
