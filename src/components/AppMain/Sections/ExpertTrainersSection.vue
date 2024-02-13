@@ -11,7 +11,7 @@ export default {
 
             <h2>Our Expert Trainers</h2>
             <p>Learn to ride a bike from the experts.</p>
-            <SectionCard hasImg="ture" />
+            <SectionCard :hasImg="true" />
 
         </div>
     </section>

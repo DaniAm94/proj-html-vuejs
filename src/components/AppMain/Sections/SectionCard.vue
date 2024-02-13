@@ -9,8 +9,10 @@ export default {
         hasSlimBorder: Boolean,
         hasMilkBorder: Boolean,
         hasWhiteBorder: Boolean,
+
         // Top card
         hasImg: Boolean,
+        img: String,
         topTitle: String,
         topDateDay: String,
         topDateMonth: String,
@@ -27,11 +29,18 @@ export default {
 
         // No image cards
         packName: String,
+        isFlipCard: Boolean,
 
         // Article cards
         articleTitle: String,
         articleText: String
 
+    },
+    computed: {
+        imagePath() {
+            const url = new URL(`../../../assets/img/${this.img}`, import.meta.url);
+            return url.href;
+        }
     }
 }
 </script>
@@ -39,22 +48,21 @@ export default {
     <div class="media-card"
         :class="{ 'card-border-black': hasBlackBorder, 'card-border-slim': hasSlimBorder, 'card-border-milk': hasMilkBorder, 'card-border-white': hasWhiteBorder }">
         <div class="top-card">
-            <figure v-if="hasImg">
-                <img class="img-fluid" src="../../../assets/img/news-bike3-300x180.jpg" alt="una a caso">
+            <figure class="mb-0" v-if="hasImg">
+                <img class="img-fluid" :src="imagePath" alt="una a caso">
                 <figcaption v-if="hasWhiteBorder">
                     22.06.2022 - Bike
                 </figcaption>
             </figure>
-
+            <!-- For cards with button -->
             <div v-if="hasWhiteBorder" class="bottom-card-with-button">
-
                 <h5>{{ articleTitle }}</h5>
                 <p>{{ articleText }}</p>
                 <BaseButton :hasArrow="false" :text="'More'" />
             </div>
 
             <!--          Flip card            -->
-            <div v-else class="flip-card">
+            <div v-if="isFlipCard" class="flip-card">
                 <div class="top-flip-card">
                     <h5>{{ packName }}</h5>
                     <span>Learn how to ride from professional</span>

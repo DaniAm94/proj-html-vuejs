@@ -11,7 +11,9 @@ export default {
         // COLORE 
         color: String,
         // COLORE SFONDO 
-        backColor: String
+        backColor: String,
+        // BORDO
+        hasBorder: Boolean
     },
     components: { FontAwesomeIcon }
 };

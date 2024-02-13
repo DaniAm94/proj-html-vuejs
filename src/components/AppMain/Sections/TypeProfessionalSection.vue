@@ -4,7 +4,10 @@ import SectionCard from './SectionCard.vue';
 import { profTypeData } from '../../../assets/data';
 export default {
     name: 'TypeProfessionalSection',
-    components: { SectionCard, CarouselButton }
+    components: { SectionCard, CarouselButton },
+    data: () => ({
+        elements: profTypeData
+    })
 }
 </script>
 <template>
@@ -12,22 +15,24 @@ export default {
         <div class="container py-3">
 
             <h2 class="text-center py-3">Our Professional Cycling Trainings</h2>
-            <div class="row row-cols-4 ">
-                <div v-for="element in profTypeData" class="col">
-                    <SectionCard :hasBlackBorder="true" />
+            <div class="row row-cols-4 flex-nowrap">
+                <div v-for="element in elements" class="col">
+                    <SectionCard :hasBlackBorder="true" :hasImg="true" :img="element.img" :hasOverlay="true"
+                        :top-title="element.title" />
                 </div>
             </div>
             <div class="text-center mt-3">
-                <CarouselButton class="color me-3" direction="left" />
-                <CarouselButton class="color" direction="right" />
+                <CarouselButton class="color me-3 border border-black  " direction="left" />
+                <CarouselButton class="color border border-black" direction="right" />
             </div>
         </div>
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .row {
-    height: 400px;
-    border: 1px dashed red;
+    overflow: hidden;
+
+
 }
 </style>
