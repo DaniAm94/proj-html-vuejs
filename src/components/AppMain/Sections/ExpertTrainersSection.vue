@@ -9,8 +9,9 @@ export default {
     <section>
         <div class="container">
 
-            <h2>TITLE</h2>
-            <p>Subtitle</p>
+            <h2>Our Expert Trainers</h2>
+            <p>Learn to ride a bike from the experts.</p>
+            <SectionCard hasImg="ture" />
 
         </div>
     </section>
@@ -20,6 +21,11 @@ export default {
 .container {
     min-height: 300px;
     text-align: center;
+    margin-top: 100px;
+
+    h2 {
+        font-weight: bold;
+    }
 
 }
 </style>
