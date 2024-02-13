@@ -6,6 +6,12 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
+import AppLogo from './components/AppLogo.vue'
+
+import BaseButton from './components/BaseButton.vue'
+
+import CarouselButton from './components/CarouselButton.vue'
+
 //Importo le singole icone
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -28,6 +34,10 @@ import App from './App.vue'
 
 const app = createApp(App);
 
-app.component('FontAwesomeIcon', FontAwesomeIcon);
+app.component('FontAwesomeIcon', FontAwesomeIcon)
+app.component('AppLogo',AppLogo)
+app.component('BaseButton',BaseButton)
+app.component('CarouselButton',CarouselButton)
+
 
 app.mount('#app')

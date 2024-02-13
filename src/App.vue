@@ -14,4 +14,5 @@ export default {
   <AppMain />
   <AppFooter />
 </template>
+
 <style></style>
