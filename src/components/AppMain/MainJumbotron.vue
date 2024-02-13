@@ -8,11 +8,15 @@ export default {
 </script>
 <template>
     <section id="jumbotron">
-        <h2>Jumbo title</h2>
-        <span>random text</span>
-        <BaseButton :hasArrow="true" :text="'Learn More'" />
-        <CarouselButton class="carousel-button left" :direction="'left'" :backColor="'bg-black'" :color="'text-white'" />
-        <CarouselButton class="carousel-button right" :direction="'right'" :backColor="'bg-black'" :color="'text-white'" />
+        <div class="container">
+            <h2>Jumbo title</h2>
+            <span>random text</span>
+            <BaseButton :hasArrow="true" :text="'Learn More'" />
+            <CarouselButton class="carousel-button left" :direction="'left'" :backColor="'bg-black'"
+                :color="'text-white'" />
+            <CarouselButton class="carousel-button right" :direction="'right'" :backColor="'bg-black'"
+                :color="'text-white'" />
+        </div>
     </section>
 </template>
 <style lang="scss" scoped>

@@ -6,10 +6,13 @@ export default {
 }
 </script>
 <template>
-    <section class="container border border-success">
-        <h2>TITLE</h2>
-        <p>Subtitle</p>
-        <CardsList />
+    <section>
+        <div class="container">
+
+            <h2>TITLE</h2>
+            <p>Subtitle</p>
+            <CardsList />
+        </div>
     </section>
 </template>
 

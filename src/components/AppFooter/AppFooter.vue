@@ -13,17 +13,22 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <FooterInfo class="info" />
-        <FooterForm class="form" />
-        <FooterNav class="nav" />
-    </div>
+    <footer>
+        <div class="container">
+            <FooterInfo class="info" />
+            <FooterForm class="form" />
+            <FooterNav class="nav" />
+        </div>
+    </footer>
 </template>
 
 <style scoped lang="scss">
+footer {
+    background-color: black;
+}
+
 div {
     display: flex;
-    background-color: black;
     color: white;
 
     .info {

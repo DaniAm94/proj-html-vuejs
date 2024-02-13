@@ -8,10 +8,12 @@ export default {
 
 
 <template>
-    <h2>TITOLO</h2>
-    <div class="container">
-        <CardsList />
-    </div>
+    <section>
+        <h2>TITOLO</h2>
+        <div class="container">
+            <CardsList />
+        </div>
+    </section>
 </template>
 
 
