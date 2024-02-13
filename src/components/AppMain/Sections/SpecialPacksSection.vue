@@ -9,7 +9,7 @@ export default {
     <section>
         <div class="container border pt-3">
             <img src="#" alt="medal">
-            <h2>TITLE: Special Packs</h2>
+            <h2>Special Packs</h2>
             <p>Subtitle</p>
             <CardsList />
         </div>
