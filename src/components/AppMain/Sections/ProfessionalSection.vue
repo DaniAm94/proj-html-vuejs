@@ -73,24 +73,21 @@ export default {
         .rotate {
             width: 500px;
             height: 500px;
-            animation: spin 1s linear infinite;
+            animation: spin 10s linear infinite;
         }
 
 
 
         @keyframes spin {
             0% {
-            transform: rotate(1turn);
+                transform: rotate(1turn);
             }
         }
     }
 
 }
 
-    .recipe-prof-cyclist {
-        width: 450px;
-    }
-
-
-
+.recipe-prof-cyclist {
+    width: 450px;
+}
 </style>
