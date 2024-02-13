@@ -1,24 +1,23 @@
 <script>
-
 export default {
     name: 'HeaderNav',
+    props: {
+        link: String
+    }
 }
 </script>
 
 <template>
-    <ul class="d-flex mb-0 list-unstyled">
-        <li>link</li>
-        <li>link</li>
-        <li>link</li>
-        <li>link</li>
-        <li>link</li>
-        <li>link</li>
-    </ul>
+    <li><a href="#">{{ link }}</a></li>
 </template>
 
 
-<style scoped>
-li {
+<style>
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.1rem;
     margin: 0 20px;
 }
 </style>
