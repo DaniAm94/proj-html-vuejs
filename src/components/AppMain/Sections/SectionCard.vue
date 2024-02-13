@@ -21,6 +21,7 @@ export default {
         hasBottom: Boolean,
         cardTitle: String,
         cardDate: String,
+        cardLocation: String,
         buttonText: String,
 
         // Bottom card black
@@ -109,7 +110,8 @@ export default {
                 {{ cardDate }}
             </div>
             <div class="location">
-                <FontAwesomeIcon icon="location-dot" /> luogo
+                <FontAwesomeIcon icon="location-dot" />
+                {{ cardLocation }}
             </div>
             <span class="label">{{ buttonText }}</span>
         </div>
