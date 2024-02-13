@@ -6,6 +6,18 @@ export default {
 }
 </script>
 <template>
-    <CardsList />
+    <section>
+        <div class="container border pt-3">
+            <img src="#" alt="medal">
+            <h2>Special Packs</h2>
+            <p>Subtitle</p>
+            <CardsList />
+        </div>
+    </section>
 </template>
-<style></style>
+<style lang="scss" scoped>
+.container {
+    min-height: 300px;
+    text-align: center;
+}
+</style>
