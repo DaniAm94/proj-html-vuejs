@@ -13,5 +13,3 @@ export default {
         <SectionCard />
     </div>
 </template>
-
-<style></style>

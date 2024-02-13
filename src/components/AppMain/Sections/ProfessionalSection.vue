@@ -1,25 +1,40 @@
 <script>
+
+import { professionalData }  from '../../../assets/data/index'
+
 export default {
     name: 'ProfessionalSection',
+
+    data: () => ({
+        professionalData,
+        image: 'assets/img/bike-player',
+        profTeam: 'Professional Team',
+        textTeam: 'We make you professional by adding your sincerity as well as professionalism.',
+        profTrainings: 'Professional Trainings',
+        textTraining: 'We always ride with the best equipment, respecting nature and fun.'
+    })
 }
 </script>
 <template>
-    <section id="professional">
+    <section id="professional" v-for="(professional, i) in professionalData" :key="i">
         <div class="container">
-
             <figure>
-                <div></div>
+                <img src="../../../assets/img/bike-player.png" alt="">
             </figure>
             <div class="recipe-prof-cyclist">
-                <article>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi facere unde repudiandae ducimus
-                    corrupti explicabo aspernatur, est ullam reiciendis, molestias libero itaque natus mollitia labore iusto
-                    soluta quia eius fugiat.
-                    Quas doloribus consequatur iure neque incidunt beatae ipsam debitis temporibus at? Natus, delectus sit
-                    nisi sunt porro consequuntur laudantium non quidem cum quibusdam possimus explicabo, ipsa sapiente
-                    voluptatibus odit doloribus!
-                    Tenetur maiores adipisci eos soluta vitae ab illum maxime modi, blanditiis suscipit ratione sed, nisi
-                    earum voluptas harum dignissimos veritatis velit fuga et aperiam. Omnis tempora voluptatibus quisquam
-                    iure ratione?</article>
+                <article>
+                    <h1 class="mb-3 fs-2">{{ professional.title }}</h1>
+                    <p>{{ professional.p }}</p>
+                </article>
+                <img src="../../../assets/img/divider.jpg" alt="">
+                <div class="mt-3">
+                    <h2 class="fs-5">{{ profTeam }}</h2>
+                    <p>{{ textTeam }}</p>
+                </div>
+                <div>
+                    <h2 class="fs-5">{{ profTrainings }}</h2>
+                    <p>{{ textTraining }}</p>
+                </div>
                 <BaseButton text="Get to know us" :hasArrow="true" />
             </div>
         </div>
@@ -27,9 +42,10 @@ export default {
 </template>
 
 <style scoped lang="scss">
+
 #professional {
-    height: 800px;
-    padding: 100px 0;
+    margin: 150px 0px;
+    
 
     .container {
         display: flex;
@@ -39,26 +55,25 @@ export default {
     }
 
     figure {
-        height: 600px;
-        width: 500px;
-        background-color: aqua;
+        height: 550px;
+        width: 550px;
+        background-image: url(../../../assets/img/bike-circle.png);
+        background-repeat: no-repeat;
+        background-size: contain;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        div {
-            background-color: black;
-            height: 700px;
-            width: 300px;
+        img {
+            height: 750px;
         }
     }
 
-    article {
-        height: 400px;
-        width: 400px;
-        background-color: black;
-        margin-bottom: 5px;
+    .recipe-prof-cyclist {
+        width: 350px;
     }
+
+    
 
 }
 </style>

@@ -102,10 +102,10 @@ const events = [
         time: "2022-06-30 @ 01:30 - 2024-10-19 @ 03:30",
         place: "Instanbul",
         type: "Bike Sport"
-    }
+    },
     {
         date: "22 JUN",
-        img: "../img/event3.jpg",
+        img: "../img/event3.jpg"
         title: "Paris Cycling Event 2023",
         time: "2022-06-22 @ 07:30 - 2024-11-08 @ 16:30",
         place: "Paris",
