@@ -13,15 +13,15 @@ export default {
         <ul>
             <li>
                 <FontAwesomeIcon class="icon" icon="location-dot" />
-                New Jersey, USA
+                <span class="m-3">New Jersey, USA</span>
             </li>
             <li>
                 <FontAwesomeIcon class="icon" icon="phone-volume" />
-                +1(234) 567 89 10
+                <span>+1(234) 567 89 10</span>
             </li>
             <li>
                 <FontAwesomeIcon class="icon" icon="fa-regular fa-envelope" />
-                example@example.com
+                <span>example@example.com</span>
             </li>
         </ul>
         <div class="socials">
@@ -42,6 +42,10 @@ export default {
 
         li {
             padding-top: 20px;
+        }
+
+        span {
+            margin-left: 10px;
         }
     }
 
