@@ -36,6 +36,14 @@ export default {
 <style lang="scss" scoped>
 #jumbotron {
 
+    figure {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 
     .container {
         max-height: 800px;
@@ -52,6 +60,7 @@ export default {
             position: absolute;
             top: 50%;
             transform: translateY(-100%);
+            width: 600px;
         }
 
         span {
