@@ -7,16 +7,17 @@ export default {
 </script>
 <template>
     <section>
-        <div class="container border pt-3">
-            <img src="#" alt="medal">
+        <div class="container text-center pt-3">
+            <p>stellina</p>
             <h2>Special Packs</h2>
             <p>Subtitle</p>
+            <div class="row row-cols-3">
+                <div class="col">
+                    <SectionCard />
+                </div>
+            </div>
         </div>
     </section>
 </template>
-<style lang="scss" scoped>
-.container {
-    min-height: 300px;
-    text-align: center;
-}
-</style>
+
+<style></style>
