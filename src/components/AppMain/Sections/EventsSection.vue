@@ -1,7 +1,14 @@
 <script>
+
 import SectionCard from './SectionCard.vue';
+
+import { events } from '../../../assets/data';
+
 export default {
     name: 'EventsSection',
+    data: () => ({
+        events
+    }),
     components: { SectionCard },
 }
 </script>
@@ -11,7 +18,7 @@ export default {
     <section>
         <h2>TITOLO</h2>
         <div class="container">
-
+            <SectionCard/>
         </div>
     </section>
 </template>
