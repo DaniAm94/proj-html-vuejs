@@ -218,7 +218,7 @@ export default {
                 left: 0;
                 right: 0;
                 border-top: 30px solid black;
-                border-right: 359px solid transparent;
+                border-right: 415px solid transparent;
 
             }
         }
