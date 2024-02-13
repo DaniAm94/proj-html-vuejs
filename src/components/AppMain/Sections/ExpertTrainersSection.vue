@@ -6,6 +6,17 @@ export default {
 }
 </script>
 <template>
-    <CardsList />
+    <section class="container border border-success">
+        <h2>TITLE</h2>
+        <p>Subtitle</p>
+        <CardsList />
+    </section>
 </template>
-<style></style>
+
+<style lang="scss" scoped>
+.container {
+    min-height: 300px;
+    text-align: center;
+
+}
+</style>
