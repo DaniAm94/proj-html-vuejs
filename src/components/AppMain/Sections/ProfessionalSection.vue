@@ -1,6 +1,6 @@
 <script>
 
-import { professionalData }  from '../../../assets/data/index'
+import { professionalData } from '../../../assets/data/index'
 
 export default {
     name: 'ProfessionalSection',
@@ -42,10 +42,9 @@ export default {
 </template>
 
 <style scoped lang="scss">
-
 #professional {
     margin: 150px 0px;
-    
+
 
     .container {
         display: flex;
@@ -70,10 +69,10 @@ export default {
     }
 
     .recipe-prof-cyclist {
-        width: 350px;
+        width: 450px;
     }
 
-    
+
 
 }
 </style>

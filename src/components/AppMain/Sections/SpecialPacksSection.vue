@@ -1,8 +1,8 @@
 <script>
-import CardsList from './CardsList.vue';
+import SectionCard from './SectionCard.vue';
 export default {
     name: 'SpecialPacksSection',
-    components: { CardsList },
+    components: { SectionCard },
 }
 </script>
 <template>
@@ -11,7 +11,7 @@ export default {
             <img src="#" alt="medal">
             <h2>Special Packs</h2>
             <p>Subtitle</p>
-            <CardsList />
+            <SectionCard />
         </div>
     </section>
 </template>

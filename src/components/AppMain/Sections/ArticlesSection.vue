@@ -1,8 +1,8 @@
 <script>
-import CardsList from './CardsList.vue';
+import SectionCard from './SectionCard.vue';
 export default {
     name: 'ArticlesSection',
-    components: { CardsList },
+    components: { SectionCard },
 }
 </script>
 
@@ -13,17 +13,15 @@ export default {
             <h6>loremmmmmmmmmmmmm</h6>
         </div>
         <div class="container my-2">
-            <CardsList />
+            <SectionCard />
         </div>
     </section>
 </template>
 
 <style scoped lang="scss">
-
 .container {
     height: 400px;
     display: flex;
     background-color: green;
 }
-
 </style>
