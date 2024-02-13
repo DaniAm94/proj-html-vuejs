@@ -19,6 +19,7 @@ export default {
     <section id="professional" v-for="(professional, i) in professionalData" :key="i">
         <div class="container">
             <figure>
+                <img class="rotate" src="../../../assets/img/bike-circle.png" alt="">
                 <img src="../../../assets/img/bike-player.png" alt="">
             </figure>
             <div class="recipe-prof-cyclist">
@@ -56,17 +57,35 @@ export default {
     figure {
         height: 550px;
         width: 550px;
-        background-image: url(../../../assets/img/bike-circle.png);
         background-repeat: no-repeat;
         background-size: contain;
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+
 
         img {
             height: 750px;
+            position: absolute;
+        }
+
+        .rotate {
+            width: 500px;
+            height: 500px;
+            animation: spin 1s linear infinite;
+        }
+
+
+
+        @keyframes spin {
+            0% {
+            transform: rotate(1turn);
+            }
         }
     }
+
+}
 
     .recipe-prof-cyclist {
         width: 450px;
@@ -74,5 +93,4 @@ export default {
 
 
 
-}
 </style>
