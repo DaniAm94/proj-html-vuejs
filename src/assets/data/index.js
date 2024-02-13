@@ -1,3 +1,5 @@
+
+
 const headerLinks = [
     'Home',
     'About Us',
@@ -208,3 +210,5 @@ const articleData = [
         text: "It takes 5 km and 10 minutes, sir. But at (...)",
     },
 ]
+
+export { headerLinks, footerLinks, jumbotronData, professionalData, profTypeData, events, expertTrainers, articleData }
