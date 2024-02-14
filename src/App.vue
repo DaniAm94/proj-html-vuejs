@@ -23,4 +23,14 @@ export default {
 
 <style lang="scss">
 @use './assets/scss/style.scss' as *;
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+}
 </style>
