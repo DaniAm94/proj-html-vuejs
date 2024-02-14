@@ -27,15 +27,15 @@ export default {
                     <HeaderNav v-for="link in headerLinks" :link="link" />
                 </ul>
                 <div class="col-3 d-flex justify-content-end p-0">
-                    <font-awesome-icon icon="bars" class="me-4 h2 align-self-center" />
-                    <BaseButton text="Upcoming Events" :hasArrow="true" />
+                    <font-awesome-icon icon="bars" class="me-4 mt-2 h2 align-self-center" />
+                    <BaseButton text="Upcoming Events" :hasArrow="true" :hasHelmet="true" />
                 </div>
             </nav>
         </div>
     </header>
 </template>
 
-<style>
+<style lang="scss">
 header {
     height: 100px;
     background-color: white;
@@ -46,5 +46,34 @@ header {
     left: 0;
 
     z-index: 1;
+
+    li {
+        margin: 0 20px;
+
+        // Animated Underline
+
+        &:after {
+            display: block;
+            content: '';
+            border-bottom: solid 3px black;
+            transform: scaleX(0);
+            transition: transform 250ms ease-in-out;
+        }
+
+        &:hover:after {
+            transform: scaleX(1.15);
+        }
+
+        &:after {
+            transform-origin: 0% 50%;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
 }
 </style>
