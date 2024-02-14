@@ -28,13 +28,19 @@ export default {
                     <p>{{ professional.p }}</p>
                 </article>
                 <img src="../../../assets/img/divider.jpg" alt="">
-                <div class="mt-3">
-                    <h2 class="fs-5">{{ profTeam }}</h2>
-                    <p>{{ textTeam }}</p>
+                <div class="mt-3 d-flex gap-1">
+                    <img class="image-helmet" src="../../../assets/img/casco-nero-su-bianco.png" alt="">
+                    <div>
+                        <h2 class="fs-5">{{ profTeam }}</h2>
+                        <p>{{ textTeam }}</p> 
+                    </div>
                 </div>
-                <div>
-                    <h2 class="fs-5">{{ profTrainings }}</h2>
-                    <p>{{ textTraining }}</p>
+                <div class="mt-3 d-flex gap-2">
+                    <img class="image-frontal-helmet" src="../../../assets/img/elmetto-fronte.png" alt="">
+                    <div>
+                        <h2 class="fs-5">{{ profTrainings }}</h2>
+                        <p>{{ textTraining }}</p>
+                    </div>
                 </div>
                 <BaseButton text="Get to know us" :hasArrow="true" />
             </div>
@@ -79,11 +85,23 @@ export default {
 
 
         @keyframes spin {
-            0% {
-                transform: rotate(1turn);
+            100% {
+                transform: rotate(360deg);
             }
         }
+
     }
+
+    .image-helmet {
+        height: 60px;
+    }
+
+    .image-frontal-helmet{
+        height: 70px;
+    }
+
+
+
 
 }
 
