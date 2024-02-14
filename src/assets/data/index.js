@@ -1,12 +1,22 @@
 
 
 const headerLinks = [
-    'Home',
-    'About Us',
-    'Trainings',
-    'Packages',
-    'Blog',
-    'Contact'
+    { title: 'Home' },
+    { title: 'About Us' },
+    {
+        title: 'Trainings',
+        subList: [
+            'Riding Lesson',
+            'Safe Driving',
+            'Mountain Bike',
+            'Trail Drive',
+            'Pedaling',
+            'All Trainings'
+        ]
+    },
+    { title: 'Packages' },
+    { title: 'Blog' },
+    { title: 'Contact' }
 ]
 
 const footerLinks = [
