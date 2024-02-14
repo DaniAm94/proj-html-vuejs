@@ -41,7 +41,7 @@ export default {
     </header>
 
     <!-- OffCanvas -->
-    <div class="offcanvas offcanvas-start show" :class="{ 'show ': isOffCanvasOn }" data-bs-scroll="true"
+    <div class="offcanvas offcanvas-start" :class="{ 'show ': isOffCanvasOn }" data-bs-scroll="true"
         data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling">
         <div class="overflow-auto">
             <div class="offcanvas-header w-100">
@@ -75,12 +75,16 @@ export default {
                     <FontAwesomeIcon class="mx-3" icon="fa-brands fa-square-instagram" />
                     <FontAwesomeIcon icon="fa-brands fa-twitter" />
                 </div>
+                <div class="copyright">
+                    <FontAwesomeIcon class="icon" icon="fa-regular fa-copyright" />
+                    2022 - Gobike
+                </div>
             </div>
         </div>
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 header {
     height: 100px;
     background-color: white;
@@ -144,6 +148,19 @@ header {
         font-size: 1rem;
         text-align: center;
         margin-bottom: 30px;
+    }
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding-bottom: 20px;
+
+    .icon {
+        position: relative;
+        right: 5px;
+        top: 4px;
     }
 }
 </style>
