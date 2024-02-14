@@ -1,7 +1,11 @@
 <script>
+import { footerLinks } from '../../assets/data';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 export default {
     name: "FooterNav",
+    data: () => ({
+        footerLinks
+    }),
     components: { FontAwesomeIcon }
 }
 </script>
@@ -9,19 +13,11 @@ export default {
 <template>
     <ul>
         <h5>Trainings</h5>
-        <li><a href="#">Riding Lesson</a></li>
-        <li><a href="#">Safe Driving</a></li>
-        <li><a href="#">Mountain Bike</a></li>
-        <li><a href="#">Trail Drive</a></li>
-        <li><a href="#">Pedaling</a></li>
+        <li><a href="#">{{ link }}</a></li>
     </ul>
     <ul>
         <h5>Quick Links</h5>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a> </li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Pakages</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">{{ link }}</a></li>
     </ul>
 </template>
 
