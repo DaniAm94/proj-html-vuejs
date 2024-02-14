@@ -56,7 +56,8 @@ export default {
 
     .social {
         padding: 5px 20px;
-        border: 1px solid white;
+        border: 1px solid rgba(255, 255, 255, 0.266);
+        margin-right: 10px;
     }
 
     .icon {
