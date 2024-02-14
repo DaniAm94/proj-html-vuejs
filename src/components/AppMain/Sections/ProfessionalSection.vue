@@ -50,7 +50,7 @@ export default {
 
 <style scoped lang="scss">
 #professional {
-    margin: 150px 0px;
+    margin-bottom: 100px;
 
 
     .container {
@@ -72,13 +72,13 @@ export default {
 
 
         img {
-            height: 650px;
+            height: 700px;
             position: absolute;
         }
 
         .rotate {
-            width: 500px;
-            height: 500px;
+            width: 550px;
+            height: 550px;
             animation: spin 10s linear infinite;
         }
 
