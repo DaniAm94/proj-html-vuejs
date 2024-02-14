@@ -190,6 +190,7 @@ export default {
             right: 0;
             bottom: 0;
             background-color: rgba(0, 0, 0, 0.432);
+            transition: background-color 0.5s linear;
 
             &:hover {
                 background-color: rgba(0, 0, 0, 0.232);
@@ -205,6 +206,7 @@ export default {
                 bottom: 20px;
                 left: 20px;
                 padding: 10px 20px;
+
             }
         }
 
