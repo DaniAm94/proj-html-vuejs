@@ -66,7 +66,7 @@ li {
 
 .dropdown-links {
     position: absolute;
-    top: 100%;
+    top: 90%;
     left: 50%;
     translate: -40% 0;
     background-color: white;
