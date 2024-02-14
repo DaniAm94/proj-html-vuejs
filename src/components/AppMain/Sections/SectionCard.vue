@@ -1,5 +1,6 @@
 <script>
 
+
 export default {
     name: 'SectionCard',
     props: {
@@ -28,7 +29,7 @@ export default {
         hasBlackBottom: Boolean,    // Sezione expertTrainers
         name: String,               // Sezione expertTrainers
 
-        // No image cards
+        // Flip card
         packName: String,           // Sezione specialPacks
         isFlipCard: Boolean,        // Sezione specialPacks
 
@@ -65,6 +66,11 @@ export default {
             <!---------------  Flip card ------------>
             <div v-if="isFlipCard" class="flip-card">
                 <div class="top-flip-card">
+                    <img v-if="packName === 'Basic'" src="../../../assets/img/stretta-di-mano.png" alt="stretta di mano">
+                    <img v-if="packName === 'Standard'" src="../../../assets/img/elmo-fronte-bianco-su-nero.png"
+                        alt="stretta di mano">
+                    <img v-if="packName === 'Premium'" src="../../../assets/img/casco-bianco-su-nero.png"
+                        alt="stretta di mano">
                     <h5>{{ packName }}</h5>
                     <span>Learn how to ride from professional</span>
                 </div>
@@ -221,6 +227,11 @@ export default {
             text-align: center;
             padding: 20px;
             margin-bottom: 80px;
+
+            img {
+                width: 120px;
+                margin-bottom: 10px;
+            }
 
             &::after {
                 content: '';
