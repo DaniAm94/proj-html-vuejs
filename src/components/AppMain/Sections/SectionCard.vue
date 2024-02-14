@@ -167,6 +167,8 @@ export default {
     &.card-border-milk {
         border: 10px solid $milk;
         border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.096);
     }
 
     &.card-border-white {
@@ -428,6 +430,7 @@ export default {
     &.card-border-milk:hover img {
         filter: brightness(40%);
         transition: 500ms;
+        scale: 1.1;
     }
 
     &:hover .bottom-black {
