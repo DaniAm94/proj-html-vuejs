@@ -126,6 +126,11 @@ header {
     }
 }
 
+.offcanvas.offcanvas-start {
+    border-right: 0;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.4);
+}
+
 .offcanvas-header {
     img {
         width: 160px;
