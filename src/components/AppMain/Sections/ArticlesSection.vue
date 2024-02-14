@@ -13,8 +13,8 @@ export default {
 <template>
     <section id="articles">
         <div class="text-center py-2">
-            <h2>TITLE</h2>
-            <h6>loremmmmmmmmmmmmm</h6>
+            <h2 class="fw-bold">Resent New & Articles</h2>
+            <h6>Important information about bike</h6>
         </div>
         <div class="container my-2">
             <div class="row row-cols-4">
