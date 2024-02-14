@@ -85,7 +85,7 @@ export default {
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 header {
     height: 100px;
     background-color: white;
@@ -100,23 +100,7 @@ header {
     li {
         margin: 0 20px;
 
-        // Animated Underline
 
-        &:after {
-            display: block;
-            content: '';
-            border-bottom: solid 3px black;
-            transform: scaleX(0);
-            transition: transform 250ms ease-in-out;
-        }
-
-        &:hover:after {
-            transform: scaleX(1);
-        }
-
-        &:after {
-            transform-origin: 0% 50%;
-        }
 
         a {
             color: black;
