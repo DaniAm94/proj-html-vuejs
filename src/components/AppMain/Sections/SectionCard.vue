@@ -10,7 +10,7 @@ export default {
         hasSlimBorder: Boolean,     // Sezione events
         hasMilkBorder: Boolean,     // Sezione expertTrainers
         hasWhiteBorder: Boolean,    // Sezione specialPacks
-
+        
         // Top card
         hasImg: Boolean,            // Sezioni typeProfessional, events, articles
         img: String,                // Sezioni typeProfessional, events, articles
@@ -117,7 +117,9 @@ export default {
             <!-- --------- Fine flip card  ------------- -->
 
 
-            <div v-if="hasOverlay" class="overlay"></div>
+            <div v-if="hasOverlay" class="overlay">
+                <BaseButton class="button-type-professional" :text="'View'"/>
+            </div>
             <div v-if="topTitle" class="top-title">{{ topTitle }}</div>
             <div v-if="topDateDay" class="top-date">
                 <div class="top-date-day">{{ topDateDay }}</div>
@@ -188,6 +190,22 @@ export default {
             right: 0;
             bottom: 0;
             background-color: rgba(0, 0, 0, 0.432);
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.232);
+            }
+
+            .button-type-professional {
+                display: none;
+            }
+
+            &:hover .button-type-professional {
+                display: flex;
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                padding: 10px 20px;
+            }
         }
 
         img {

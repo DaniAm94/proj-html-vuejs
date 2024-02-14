@@ -52,7 +52,7 @@ export default {
                 <!-- Itero sulle currentCards -->
                 <div v-for="card in currentCards" class="col">
                     <SectionCard :hasBlackBorder="true" :hasImg="true" :img="card.img" :hasOverlay="true"
-                        :top-title="card.title" />
+                        :top-title="card.title" overlayBottonText="View" />
                 </div>
             </div>
             <div class="text-center mt-5">
