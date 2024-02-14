@@ -71,7 +71,7 @@ li {
     translate: -40% 0;
     background-color: white;
     white-space: nowrap;
-    box-shadow: 0 0 5px gray;
+    box-shadow: 0 0 5px rgb(0 0 0 / 15%);
     display: none;
 }
 </style>
