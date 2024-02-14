@@ -14,7 +14,6 @@ export default {
 </script>
 
 <template>
-
     <!-- SEZIONE ESPERTI -->
     <section>
 
@@ -29,7 +28,8 @@ export default {
                 <div v-for="card in expertTrainers" class="col-3">
 
                     <!-- CARD -->
-                    <SectionCard :hasImg="true" :hasBlackBottom="true" :name="card.name" :img="card.img" />
+                    <SectionCard :hasImg="true" :hasBlackBottom="true" :name="card.name" :img="card.img"
+                        :hasMilkBorder="true" />
 
                 </div>
             </div>
@@ -37,28 +37,25 @@ export default {
         </div>
 
     </section>
-
 </template>
 
 <style lang="scss" scoped>
-
 // SEZIONE PROFESSIONISTI 
 section {
-    background-image: linear-gradient(#fbfbfb 25%,#ffffff);
+    background-image: linear-gradient(#fbfbfb 25%, #ffffff);
 
-// CONTENITORE 
-.container {
-    min-height: 300px;
-    text-align: center;
-    margin-top: 100px;
+    // CONTENITORE 
+    .container {
+        min-height: 300px;
+        text-align: center;
+        margin-top: 100px;
 
-    // TITOLO
-    h2 {
-        font-weight: bold;
-        padding-top: 3px;
+        // TITOLO
+        h2 {
+            font-weight: bold;
+            padding-top: 3px;
+        }
     }
-}
 
 }
-
 </style>
