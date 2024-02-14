@@ -10,7 +10,7 @@ export default {
         hasSlimBorder: Boolean,     // Sezione events
         hasMilkBorder: Boolean,     // Sezione expertTrainers
         hasWhiteBorder: Boolean,    // Sezione specialPacks
-        
+
         // Top card
         hasImg: Boolean,            // Sezioni typeProfessional, events, articles
         img: String,                // Sezioni typeProfessional, events, articles
@@ -118,7 +118,7 @@ export default {
 
 
             <div v-if="hasOverlay" class="overlay">
-                <BaseButton class="button-type-professional" :text="'View'"/>
+                <BaseButton class="button-type-professional" :text="'View'" />
             </div>
             <div v-if="topTitle" class="top-title">{{ topTitle }}</div>
             <div v-if="topDateDay" class="top-date">
@@ -408,6 +408,33 @@ export default {
             font-size: 1rem;
         }
     }
+
+    @keyframes animation {
+        0% {
+            height: calc(100% / 3);
+        }
+
+        75% {
+            height: 140px;
+        }
+
+        100% {
+            height: 130px;
+        }
+
+
+    }
+
+    &.card-border-milk:hover img {
+        filter: brightness(40%);
+        transition: 500ms;
+    }
+
+    &:hover .bottom-black {
+        animation: animation 500ms both;
+
+    }
+
 
     // Sezione articles
     .bottom-card-with-button {
