@@ -98,7 +98,7 @@ const events = [
     {
         date: "30 JUN",
         img: "event2.jpg",
-        title: "Instambul Cycling Event 2023",
+        title: "Instanbul Cycling Event 2023",
         time: "2022-06-30 @ 01:30 - 2024-10-19 @ 03:30",
         place: "Instanbul",
         type: "Bike Sport"
