@@ -27,7 +27,8 @@ export default {
     <header>
         <div class="container p-0 h-100">
             <nav class="row align-items-center h-100">
-                <div class="col-2 p-0 py-2"><img class="img-fluid" src="../../assets/img/logo-gobike.png" alt="logo">
+                <div class="col-2 p-0 py-2">
+                    <img class="img-fluid" src="../../assets/img/logo-gobike.png" alt="logo">
                 </div>
                 <ul class="col d-flex justify-content-center mb-0 list-unstyled pe-0">
                     <HeaderNav v-for="link in headerLinks" :link="link" />
@@ -110,7 +111,7 @@ header {
         }
 
         &:hover:after {
-            transform: scaleX(1.15);
+            transform: scaleX(1);
         }
 
         &:after {
@@ -118,7 +119,6 @@ header {
         }
 
         a {
-            text-decoration: none;
             color: black;
             font-weight: 600;
             font-size: 1.1rem;
