@@ -12,12 +12,4 @@ export default {
 </template>
 
 
-<style>
-a {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin: 0 20px;
-}
-</style>
+<style></style>
