@@ -9,6 +9,7 @@ export default {
         slides: jumbotronData,
         currentActiveIndex: 0,
     }),
+    /* Il carosello inizia a girare dall'avvio della pagina verso sinistra*/
     created() {
         setInterval(() => {
             this.goTo('right')
@@ -16,13 +17,7 @@ export default {
 
     },
     computed: {
-        isFirstIndex() {
-            return this.currentActiveIndex === 0;
-
-        },
-        isLastIndex() {
-            return this.currentActiveIndex === this.slides.length - 1;
-        },
+        /*computed che mi determina qual è la lunghezza dell'array*/
         lastIndex() {
             return this.slides.length - 1;
         },
@@ -31,6 +26,8 @@ export default {
 
     },
     methods: {
+        /*method che se ha come direction right entra in un secondo if: se il currentActiveindex è uguale all'indice 
+        dell'ultimo elemento dell'array, diventa 0, altrimenti il suo indice aumenta di uno */
         goTo(direction) {
             if (direction === 'right') {
                 if (this.currentActiveIndex === this.lastIndex) {
@@ -39,7 +36,8 @@ export default {
                     clearInterval(this.startAutoplay)
                     this.currentActiveIndex++;
                 }
-
+                /*se la direction non è right, si entra in un'altro if: se il currentActiveindex è uguale a zero,
+                il suo indice diventa l'indice dell'ultimo elemento, altrimenti il suo indice diminuisce di uno */
             } else {
                 if (this.currentActiveIndex === 0) {
                     this.currentActiveIndex = this.lastIndex;
@@ -49,6 +47,7 @@ export default {
                 }
             }
         },
+        /*method per creare il path dell'image dinamica*/
         getImagePath(img) {
             const url = new URL(`../../assets/img/${img}`, import.meta.url);
             return url.href;
@@ -60,6 +59,7 @@ export default {
 </script>
 <template>
     <section id="jumbotron">
+        <!--IMAGE-->
         <figure v-for="(slide, i) in  slides " v-show="i === currentActiveIndex">
             <img :src="getImagePath(slide.img)" :alt="slide.title">
         </figure>
