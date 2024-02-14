@@ -63,12 +63,12 @@ export default {
                 <span class="text-white ps-5">{{ slide.text }}</span>
             </div>
             <!--BUTTON-->
-            <BaseButton :hasArrow="true" :text="'Learn More'" class="ms-5 base-button" />
+            <BaseButton :hasArrow="true" :text="'Learn More'" class="ms-5 base-button"/>
 
 
             <!--NEXT BUTTON-->
             <CarouselButton @click="goTo('right')" class="carousel-button right" :direction="'right'"
-                :backColor="'bg-black'" :color="'text-white'" />
+                :backColor="'bg-black'" :color="'text-white'"/>
         </div>
     </section>
 </template>

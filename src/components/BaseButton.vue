@@ -8,8 +8,9 @@ export default {
         // TESTO BOTTONE
         text: String,
         // CLASSE ICONA
-        hasArrow: Boolean
-    },
+        hasArrow: Boolean,
+        hasHelmet: Boolean
+    }
 };
 
 </script>
@@ -17,7 +18,9 @@ export default {
 <!-- HTML -->
 <template>
     <!-- BOTTONI GLOBALI -->
-    <button>{{ text }}
+    <button>
+        <img v-if="hasHelmet" src="../../src/assets/img/casco-bianco-su-nero.png" alt="Helmet">
+        {{ text }}
         <FontAwesomeIcon v-if="hasArrow" icon="arrow-right" />
     </button>
 </template>
@@ -32,6 +35,10 @@ button {
     color: $white;
     border: 1px solid $black;
     border-radius: 1px;
+
+    img {
+        width: 50px;
+    }
 
 }
 </style>
