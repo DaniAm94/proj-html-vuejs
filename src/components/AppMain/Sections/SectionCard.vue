@@ -5,36 +5,36 @@ export default {
     props: {
 
         // Card generics
-        hasBlackBorder: Boolean,
-        hasSlimBorder: Boolean,
-        hasMilkBorder: Boolean,
-        hasWhiteBorder: Boolean,
+        hasBlackBorder: Boolean,    // Sezione typeProfessional
+        hasSlimBorder: Boolean,     // Sezione events
+        hasMilkBorder: Boolean,     // Sezione expertTrainers
+        hasWhiteBorder: Boolean,    // Sezione specialPacks
 
         // Top card
-        hasImg: Boolean,
-        img: String,
-        topTitle: String,
-        topDateDay: String,
-        topDateMonth: String,
-        hasOverlay: Boolean,
+        hasImg: Boolean,            // Sezioni typeProfessional, events, articles
+        img: String,                // Sezioni typeProfessional, events, articles
+        topTitle: String,           // Sezione typeProfessional
+        topDateDay: String,         // Sezione events
+        topDateMonth: String,       // Sezione events
+        hasOverlay: Boolean,        // Sezione typeProfessional
         // Bottom card
-        hasBottom: Boolean,
-        cardTitle: String,
-        cardDate: String,
-        cardLocation: String,
-        buttonText: String,
+        hasBottom: Boolean,         // Sezione events
+        cardTitle: String,          // Sezione events
+        cardDate: String,           // Sezione events
+        cardLocation: String,       // Sezione events
+        buttonText: String,         // Sezione articles
 
         // Bottom card black
-        hasBlackBottom: Boolean,
-        name: String,
+        hasBlackBottom: Boolean,    // Sezione expertTrainers
+        name: String,               // Sezione expertTrainers
 
         // No image cards
-        packName: String,
-        isFlipCard: Boolean,
+        packName: String,           // Sezione specialPacks
+        isFlipCard: Boolean,        // Sezione specialPacks
 
         // Article cards
-        articleTitle: String,
-        articleText: String
+        articleTitle: String,       // Sezione articles
+        articleText: String         // Sezione articles
 
     },
     computed: {
@@ -62,7 +62,7 @@ export default {
                 <BaseButton :hasArrow="false" :text="'More'" />
             </div>
 
-            <!--          Flip card            -->
+            <!---------------  Flip card ------------>
             <div v-if="isFlipCard" class="flip-card">
                 <div class="top-flip-card">
                     <h5>{{ packName }}</h5>
@@ -93,7 +93,7 @@ export default {
                     </ul>
                 </div>
             </div>
-            <!-- ----------------------------- -->
+            <!-- --------- Fine flip card  ------------- -->
 
 
             <div v-if="hasOverlay" class="overlay"></div>
@@ -132,6 +132,7 @@ export default {
 .media-card {
     position: relative;
 
+    // ------------     Card borders    -------------------
     &.card-border-black {
         border: 5px solid black;
     }
@@ -151,11 +152,14 @@ export default {
         box-shadow: 3px 3px 13px 0 rgba(0, 0, 0, 0.096);
     }
 
+    // -----------------------------------------------------
+
     // Card with img
     .top-card {
         height: 100%;
         position: relative;
 
+        // Sezione typeProfessional
         .overlay {
             position: absolute;
             top: 0;
@@ -169,12 +173,14 @@ export default {
             width: 100%;
         }
 
+        // Sezione articles
         figcaption {
             font-weight: bold;
             font-size: 0.9rem;
             text-align: center;
         }
 
+        // Sezione typeProfessional
         .top-title {
             position: absolute;
             top: 20px;
@@ -183,6 +189,8 @@ export default {
             font-size: 2rem;
         }
 
+
+        // Sezione events
         .top-date {
             background-color: white;
             position: absolute;
@@ -195,13 +203,14 @@ export default {
             text-align: center;
         }
 
+        // Sezione events
         .top-date-day {
             font-size: 1.2rem;
             font-weight: bold;
         }
     }
 
-    // Flip card (no img)
+    //-------------- Flip card (no img)---------------------
     .flip-card {
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 
@@ -249,7 +258,9 @@ export default {
 
     }
 
-    //----------------------------
+    //--------  Fine flip card        --------------------
+
+    // Sezione events
     .bottom-card {
 
         display: flex;
@@ -264,6 +275,7 @@ export default {
         }
     }
 
+    // Sezione expertTrainers
     .bottom-black {
         padding: 20px 0;
         position: absolute;
@@ -285,6 +297,7 @@ export default {
         }
     }
 
+    // Sezione articles
     .bottom-card-with-button {
         text-align: center;
 
