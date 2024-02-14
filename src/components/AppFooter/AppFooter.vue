@@ -1,12 +1,10 @@
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import FooterNav from './FooterNav.vue';
 import FooterForm from './FooterForm.vue';
 import FooterInfo from './FooterInfo.vue';
 export default {
     name: "AppFooter",
     components: {
-        FontAwesomeIcon,
         FooterForm,
         FooterNav,
         FooterInfo

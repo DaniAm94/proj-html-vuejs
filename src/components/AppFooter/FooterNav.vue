@@ -1,15 +1,10 @@
 <script>
 import { footerLinks } from '../../assets/data';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 export default {
     name: "FooterNav",
     data: () => ({
         footerLinks
-    }),
-    components: {
-        FontAwesomeIcon,
-
-    }
+    })
 }
 </script>
 
@@ -17,7 +12,11 @@ export default {
     <div v-for="linkGroup in footerLinks">
         <h5>{{ linkGroup.title }}</h5>
         <ul>
-            <li v-for="link in linkGroup.links">{{ link }}</li>
+            <li v-for="link in linkGroup.links">
+                <a href="#">
+                    {{ link }}
+                </a>
+            </li>
         </ul>
     </div>
 </template>
@@ -55,7 +54,6 @@ ul {
     }
 
     a {
-        text-decoration: none;
         color: white;
     }
 

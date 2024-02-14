@@ -1,8 +1,6 @@
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 export default {
     name: "Footerform",
-    components: { FontAwesomeIcon }
 }
 </script>
 
