@@ -299,7 +299,13 @@ export default {
 
     // Sezione articles
     .bottom-card-with-button {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         text-align: center;
+        height: 220px;
 
     }
 
