@@ -20,6 +20,12 @@ export default {
         lastIndex() {
             return this.slides.length - 1;
         },
+        startAutoplay() {
+            setInterval(() => {
+                this.goTo('right')
+            }, 10000);
+        },
+
 
     },
     methods: {
@@ -28,6 +34,7 @@ export default {
                 if (this.currentActiveIndex === this.lastIndex) {
                     this.currentActiveIndex = 0;
                 } else {
+                    clearInterval(this.startAutoplay)
                     this.currentActiveIndex++;
                 }
 
@@ -35,6 +42,7 @@ export default {
                 if (this.currentActiveIndex === 0) {
                     this.currentActiveIndex = this.lastIndex;
                 } else {
+                    clearInterval(this.startAutoplay)
                     this.currentActiveIndex--;
                 }
             }
@@ -42,7 +50,8 @@ export default {
         getImagePath(img) {
             const url = new URL(`../../assets/img/${img}`, import.meta.url);
             return url.href;
-        }
+        },
+
 
     },
 }
@@ -63,12 +72,12 @@ export default {
                 <span class="text-white ps-5">{{ slide.text }}</span>
             </div>
             <!--BUTTON-->
-            <BaseButton :hasArrow="true" :text="'Learn More'" class="ms-5 base-button"/>
+            <BaseButton :hasArrow="true" :text="'Learn More'" class="ms-5 base-button" />
 
 
             <!--NEXT BUTTON-->
             <CarouselButton @click="goTo('right')" class="carousel-button right" :direction="'right'"
-                :backColor="'bg-black'" :color="'text-white'"/>
+                :backColor="'bg-black'" :color="'text-white'" />
         </div>
     </section>
 </template>
