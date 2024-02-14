@@ -9,6 +9,12 @@ export default {
         slides: jumbotronData,
         currentActiveIndex: 0,
     }),
+    created() {
+        setInterval(() => {
+            this.goTo('right')
+        }, 10000);
+
+    },
     computed: {
         isFirstIndex() {
             return this.currentActiveIndex === 0;
@@ -20,11 +26,7 @@ export default {
         lastIndex() {
             return this.slides.length - 1;
         },
-        startAutoplay() {
-            setInterval(() => {
-                this.goTo('right')
-            }, 10000);
-        },
+
 
 
     },
