@@ -1,12 +1,22 @@
 
 
 const headerLinks = [
-    'Home',
-    'About Us',
-    'Trainings',
-    'Packages',
-    'Blog',
-    'Contact'
+    { title: 'Home' },
+    { title: 'About Us' },
+    {
+        title: 'Trainings',
+        subList: [
+            'Riding Lesson',
+            'Safe Driving',
+            'Mountain Bike',
+            'Trail Drive',
+            'Pedaling',
+            'All Trainings'
+        ]
+    },
+    { title: 'Packages' },
+    { title: 'Blog' },
+    { title: 'Contact' }
 ]
 
 const footerLinks = [
@@ -34,17 +44,17 @@ const footerLinks = [
 
 const jumbotronData = [
     {
-        title: "Learn Mountain Bike From The Expert",
+        title: "Unforgettable Cycling Experience",
         text: "Learn cycling from the pros.",
         img: "slider-bike-4.jpg"
     },
     {
-        title: "Unforgettable Cycling Experience",
+        title: "Professional Cycling Club",
         text: "Learn cycling from the pros.",
         img: "slider-bike-9.jpg"
     },
     {
-        title: "Professional Cycling Club",
+        title: "Learn Mountain Bike From The Expert",
         text: "Learn cycling from the pros.",
         img: "slider-bike-12.jpg"
     }
