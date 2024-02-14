@@ -30,7 +30,8 @@ export default {
         name: String,               // Sezione expertTrainers
 
         // Flip card
-        packName: String,           // Sezione specialPacks
+        packName: String,
+        packPrice: String,           // Sezione specialPacks
         isFlipCard: Boolean,        // Sezione specialPacks
 
         // Article cards
@@ -65,41 +66,52 @@ export default {
 
             <!---------------  Flip card ------------>
             <div v-if="isFlipCard" class="flip-card">
-                <div class="top-flip-card">
-                    <figure>
-                        <img v-if="packName === 'Basic'" src="../../../assets/img/stretta-di-mano.png"
-                            alt="stretta di mano">
-                        <img v-if="packName === 'Standard'" src="../../../assets/img/elmo-fronte-bianco-su-nero.png"
-                            alt="stretta di mano">
-                        <img v-if="packName === 'Premium'" src="../../../assets/img/casco-bianco-su-nero.png"
-                            alt="stretta di mano">
-                    </figure>
-                    <h5>{{ packName }}</h5>
-                    <span>Learn how to ride from professional</span>
-                </div>
-                <div class="bottom-flip-card">
-                    <ul>
-                        <li>
-                            <FontAwesomeIcon icon="check" />
-                            Phone Mountaineer bike training
-                        </li>
-                        <li>
-                            <FontAwesomeIcon icon="check" />
-                            Remote Excellent bike service
-                        </li>
-                        <li>
-                            <FontAwesomeIcon icon="check" />
-                            Onsite Safe cycling training
-                        </li>
-                        <li>
-                            <FontAwesomeIcon icon="xmark" />
-                            Saafety helmet on bike
-                        </li>
-                        <li>
-                            <FontAwesomeIcon icon="xmark" />
-                            Free bikes for children
-                        </li>
-                    </ul>
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+
+                        <div class="top-flip-card">
+                            <figure>
+                                <img v-if="packName === 'Basic'" src="../../../assets/img/stretta-di-mano.png"
+                                    alt="stretta di mano">
+                                <img v-if="packName === 'Standard'" src="../../../assets/img/elmo-fronte-bianco-su-nero.png"
+                                    alt="stretta di mano">
+                                <img v-if="packName === 'Premium'" src="../../../assets/img/casco-bianco-su-nero.png"
+                                    alt="stretta di mano">
+                            </figure>
+                            <h5>{{ packName }}</h5>
+                            <span>Learn how to ride from professional</span>
+                        </div>
+                        <div class="bottom-flip-card">
+                            <ul>
+                                <li>
+                                    <FontAwesomeIcon icon="check" />
+                                    Phone Mountaineer bike training
+                                </li>
+                                <li>
+                                    <FontAwesomeIcon icon="check" />
+                                    Remote Excellent bike service
+                                </li>
+                                <li>
+                                    <FontAwesomeIcon icon="check" />
+                                    Onsite Safe cycling training
+                                </li>
+                                <li>
+                                    <FontAwesomeIcon icon="xmark" />
+                                    Saafety helmet on bike
+                                </li>
+                                <li>
+                                    <FontAwesomeIcon icon="xmark" />
+                                    Free bikes for children
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flip-card-back">
+                        <h5>{{ packName }}</h5>
+                        <h4 class="fw-bold">{{ packPrice }}</h4>
+                        <button>Send Request!</button>
+                    </div>
+
                 </div>
             </div>
             <!-- --------- Fine flip card  ------------- -->
@@ -219,10 +231,41 @@ export default {
         }
     }
 
-    //-------------- Flip card (no img)---------------------
+    //-------------- Flip card ---------------------
     .flip-card {
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        background-color: transparent;
+        // per l'effetto 3d
+        perspective: 1000px;
 
+        &:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-inner {
+            position: relative;
+            height: 550px;
+            transition: transform 0.8s;
+            // Per l'effetto 3d
+            transform-style: preserve-3d;
+        }
+
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+
+            //  Per nascondere la faccia dietro
+            backface-visibility: hidden;
+            // Per safari
+            -webkit-backface-visibility: hidden;
+        }
+
+        // Lato front
         .top-flip-card {
             position: relative;
             background-color: black;
@@ -259,6 +302,7 @@ export default {
 
         .bottom-flip-card {
             padding-bottom: 20px;
+            background-color: white;
 
             ul {
                 list-style-type: none;
@@ -278,6 +322,31 @@ export default {
                 }
             }
         }
+
+        // Fine lato front
+
+        // Lato back
+        .flip-card-back {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            transform: rotateY(180deg);
+
+            button {
+                background-color: black;
+                border: 2px solid white;
+                color: white;
+                height: 70px;
+                width: 200px;
+                margin-top: 70px;
+            }
+
+        }
+
+        // FIne lato back
 
     }
 

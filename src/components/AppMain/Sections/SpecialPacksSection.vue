@@ -18,7 +18,7 @@ export default {
             <p>Select pricing plan to get more</p>
             <div class="row row-cols-3">
                 <div v-for="pack in specPacks" class="col">
-                    <SectionCard :packName="pack.title" :isFlipCard="true" />
+                    <SectionCard :packName="pack.title" :packPrice="pack.price" :isFlipCard="true" />
                 </div>
             </div>
         </div>
