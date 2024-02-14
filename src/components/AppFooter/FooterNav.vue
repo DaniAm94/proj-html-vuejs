@@ -6,31 +6,37 @@ export default {
     data: () => ({
         footerLinks
     }),
-    components: { FontAwesomeIcon }
+    components: {
+        FontAwesomeIcon,
+
+    }
 }
 </script>
 
 <template>
-    <ul>
-        <h5>Trainings</h5>
-        <li><a href="#">{{ link }}</a></li>
-    </ul>
-    <ul>
-        <h5>Quick Links</h5>
-        <li><a href="#">{{ link }}</a></li>
-    </ul>
+    <div v-for="linkGroup in footerLinks">
+        <h5>{{ linkGroup.title }}</h5>
+        <ul>
+            <li v-for="link in linkGroup.links">{{ link }}</li>
+        </ul>
+    </div>
 </template>
 
 <style scoped lang="scss">
+div {
+    padding: 10px;
+}
+
+h5 {
+    font-size: 1.7rem;
+    position: relative;
+    left: 10px;
+    font-weight: bold;
+}
+
 ul {
     list-style-type: none;
 
-    h5 {
-        font-size: 1.7rem;
-        position: relative;
-        right: 20px;
-        font-weight: bold;
-    }
 
     li {
         padding-top: 10px;
