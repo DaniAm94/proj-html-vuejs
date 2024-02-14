@@ -40,15 +40,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../../assets/scss/vars' as *;
+
 // SEZIONE PROFESSIONISTI 
 section {
-    background-image: linear-gradient(#fbfbfb 25%, #ffffff);
+    margin: 70px 0;
+    padding: 50px 0;
+    background-image: linear-gradient($milk 40%, $white 40%);
 
     // CONTENITORE 
     .container {
         min-height: 300px;
         text-align: center;
-        margin-top: 100px;
 
         // TITOLO
         h2 {
