@@ -307,6 +307,9 @@ export default {
         text-align: center;
         height: 220px;
 
+        p {
+            min-height: 73px;
+        }
     }
 
 }
