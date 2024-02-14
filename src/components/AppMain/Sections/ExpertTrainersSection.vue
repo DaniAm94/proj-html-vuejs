@@ -26,16 +26,21 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+
+section {
+    background-image: linear-gradient(#fbfbfb 25%,#ffffff);
+
 .container {
     min-height: 300px;
     text-align: center;
     margin-top: 100px;
 
-    .card {}
-
     h2 {
         font-weight: bold;
+        padding-top: 3px;
     }
 
+}
 }
 </style>
