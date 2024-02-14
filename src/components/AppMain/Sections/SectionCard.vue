@@ -66,11 +66,14 @@ export default {
             <!---------------  Flip card ------------>
             <div v-if="isFlipCard" class="flip-card">
                 <div class="top-flip-card">
-                    <img v-if="packName === 'Basic'" src="../../../assets/img/stretta-di-mano.png" alt="stretta di mano">
-                    <img v-if="packName === 'Standard'" src="../../../assets/img/elmo-fronte-bianco-su-nero.png"
-                        alt="stretta di mano">
-                    <img v-if="packName === 'Premium'" src="../../../assets/img/casco-bianco-su-nero.png"
-                        alt="stretta di mano">
+                    <figure>
+                        <img v-if="packName === 'Basic'" src="../../../assets/img/stretta-di-mano.png"
+                            alt="stretta di mano">
+                        <img v-if="packName === 'Standard'" src="../../../assets/img/elmo-fronte-bianco-su-nero.png"
+                            alt="stretta di mano">
+                        <img v-if="packName === 'Premium'" src="../../../assets/img/casco-bianco-su-nero.png"
+                            alt="stretta di mano">
+                    </figure>
                     <h5>{{ packName }}</h5>
                     <span>Learn how to ride from professional</span>
                 </div>
@@ -228,9 +231,18 @@ export default {
             padding: 20px;
             margin-bottom: 80px;
 
-            img {
+            figure {
                 width: 120px;
+                height: 100px;
+                margin: 0 auto;
                 margin-bottom: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                }
             }
 
             &::after {
