@@ -11,8 +11,8 @@ export default {
 </script>
 
 <template>
-    <section id="recipe-articles" class="my-5">
-        <div class="text-center bg-danger py-2">
+    <section id="articles">
+        <div class="text-center py-2">
             <h2>TITLE</h2>
             <h6>loremmmmmmmmmmmmm</h6>
         </div>
@@ -28,7 +28,11 @@ export default {
 </template>
 
 <style lang="scss">
-#recipe-articles {
+@use '../../../assets/scss/vars' as*;
+
+#articles {
+    background-color: $milk;
+    padding: 60px 0;
 
     button {
         padding: 20px 40px;

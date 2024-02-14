@@ -10,3 +10,6 @@ export default {
 <template>
     <li><a href="#">{{ link }}</a></li>
 </template>
+
+
+<style></style>
