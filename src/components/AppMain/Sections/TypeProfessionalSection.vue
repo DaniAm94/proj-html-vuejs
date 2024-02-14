@@ -16,11 +16,14 @@ export default {
         // La card nascosta: iterando nell'array completo, trova quell'elemento che non è incluso nelle current cards
         hiddenCard() {
             return this.elements.find(element => !this.currentCards.includes(element))
+        },
+        lastIndex() {
+            return this.elements.length - 1;
         }
     },
     created() {
         // Al created metto nell'array current cards tutte le card tranne quella che sta in ultima posizione
-        this.currentCards = this.elements.filter((element, i) => i !== this.elements.length - 1)
+        this.currentCards = this.elements.filter((element, i) => i !== this.lastIndex)
     },
     methods: {
         goTo(direction) {
