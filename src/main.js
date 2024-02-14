@@ -12,20 +12,25 @@ import BaseButton from './components/BaseButton.vue'
 
 import CarouselButton from './components/CarouselButton.vue'
 
-//Importo le singole icone
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-import { faAt } from '@fortawesome/free-solid-svg-icons';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+//  Importo le singole icone
+// Icone solid
+import {
+    faArrowRight,
+    faBars,
+    faAngleRight,
+    faAngleLeft,
+    faAt,
+    faLocationDot,
+    faCheck,
+    faXmark,
+    faPhoneVolume
+} from '@fortawesome/free-solid-svg-icons';
+
+// Icone regular
 import { faClock, faEnvelope, faCopyright } from '@fortawesome/free-regular-svg-icons';
-import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
-import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
+
+// Icone brands
+import { faFacebookF, faSquareInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 
 library.add(faArrowRight, faBars, faAngleRight, faAngleLeft, faAt, faLocationDot, faClock, faEnvelope, faCopyright, faFacebookF, faSquareInstagram, faTwitter, faCheck, faXmark, faPhoneVolume);
@@ -35,9 +40,9 @@ import App from './App.vue'
 const app = createApp(App);
 
 app.component('FontAwesomeIcon', FontAwesomeIcon)
-app.component('AppLogo',AppLogo)
-app.component('BaseButton',BaseButton)
-app.component('CarouselButton',CarouselButton)
+app.component('AppLogo', AppLogo)
+app.component('BaseButton', BaseButton)
+app.component('CarouselButton', CarouselButton)
 
 
 app.mount('#app')
