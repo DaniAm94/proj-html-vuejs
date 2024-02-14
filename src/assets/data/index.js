@@ -34,17 +34,17 @@ const footerLinks = [
 
 const jumbotronData = [
     {
-        title: "Learn Mountain Bike From The Expert",
+        title: "Unforgettable Cycling Experience",
         text: "Learn cycling from the pros.",
         img: "slider-bike-4.jpg"
     },
     {
-        title: "Unforgettable Cycling Experience",
+        title: "Professional Cycling Club",
         text: "Learn cycling from the pros.",
         img: "slider-bike-9.jpg"
     },
     {
-        title: "Professional Cycling Club",
+        title: "Learn Mountain Bike From The Expert",
         text: "Learn cycling from the pros.",
         img: "slider-bike-12.jpg"
     }
